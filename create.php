@@ -17,7 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

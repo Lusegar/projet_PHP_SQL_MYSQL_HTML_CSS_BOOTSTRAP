@@ -21,7 +21,6 @@ if (isset($_GET["id"])) {
 }
 $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>

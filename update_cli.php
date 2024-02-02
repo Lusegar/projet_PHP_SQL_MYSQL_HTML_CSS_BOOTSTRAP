@@ -17,7 +17,6 @@
         echo "ID du client non spécifié.";
         exit();
     }
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nom_cli = $_POST["nom_cli"];
         $prenom_cli = $_POST["prenom_cli"];
@@ -26,9 +25,7 @@
         $cp_cli = $_POST["cp_cli"];
         $titre_cli = $_POST["titre_cli"];
         $tel_cli = $_POST["tel_cli"];
-    
         $update_sql = "UPDATE  client SET NOMCLIE='$nom_cli', PRENOMCLIE='$prenom_cli', ADRESSECLIE='$adresse_cli', VILLECLIE='$ville_cli', CODEPOSTALCLIE='$cp_cli', TITRECLIE='$titre_cli', NROTELCLIE='$tel_cli' WHERE NROCLIE=$cli_id";
-
         if ($conn_mysqli->query($update_sql)) {
             header("Location: client.php");
         } else {
@@ -37,7 +34,6 @@
     }
     $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -78,8 +74,7 @@
             width: 300px;
             height: 300px;
         }
-    </style>
-
+</style>
 <div class="container">
     <h2>Modifier un client</h2>
     <form method="post" action="">

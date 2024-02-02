@@ -21,7 +21,6 @@ if (isset($_GET["id"])) {
 }
 $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -63,7 +62,6 @@ $conn_mysqli->close();
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="row">
         <div class="col-md-6">

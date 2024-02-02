@@ -38,27 +38,15 @@
         width: 300px;
         height: 300px;
     }
-    </style>
-
+</style>
 <?php
-//connect to mysql
 $servername = "localhost";
 $username = "root";
-
-//mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ALL);
-// msqli est seulement pour mysql
 try {
-
-
     $conn_mysqli = new mysqli($servername, $username, "", "pizza");
 } catch (Exception $e) {
     die("probleme d'application , veullez contacter votre administrateur : ");
-
 }
-// je suis connecté à la base de données
-//echo "Connected successfully";
-
-// je fais une requete sql
 $sql_pizza_all = "SELECT * FROM pizza";
 ?>
 <div class="container">
@@ -66,19 +54,13 @@ $sql_pizza_all = "SELECT * FROM pizza";
     <h1>Bootstrap Tutorial avec pizzabox mysql</h1>
     <p>liste de mes pizzas.</p>
         <button type="button" class="btn btn-dark"><a href='create.php'>créer une pizza</a></button>
-
   </div>
-
 </div>
 <br>
 <?php
-// j'execute la requete
 $result = $conn_mysqli->query($sql_pizza_all);
 echo ("<div class='container-fluid'>");
-
-// je recupere les données en faisant un boucle
 echo("<div class='row'>");
-
 while ($ligne = $result->fetch_assoc()) {
     echo("<div class=' card col-sm-3 col-md-3'>");
     echo'<img class="card-img-top" src="images_pizza/'.$ligne['NROPIZZ'].'.jpg" alt="Card image">';
@@ -90,7 +72,7 @@ while ($ligne = $result->fetch_assoc()) {
     echo("<a href='update.php?id= ".$ligne['NROPIZZ']."' class='btn btn-secondary'> update  </a> ");
     echo("</div>");
     echo("</div>");
-}// fin du while
+}
  echo("</div>");
 echo("</div>");
 ?>

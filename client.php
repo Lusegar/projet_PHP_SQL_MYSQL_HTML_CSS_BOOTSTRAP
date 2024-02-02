@@ -41,25 +41,15 @@
     </style>
 
 <?php
-//connect to mysql
+
 $servername = "localhost";
 $username = "root";
 
-//mysqli_report(MYSQLI_REPORT_STRICT | MYSQLI_REPORT_ALL);
-// msqli est seulement pour mysql
 try {
-
-
     $conn_mysqli = new mysqli($servername, $username, "", "pizza");
 } catch (Exception $e) {
     die("probleme d'application , veullez contacter votre administrateur : ");
-
 }
-
-// je suis connecté à la base de données
-//echo "Connected successfully";
-
-// je fais une requete sql
 $sql_pizza_all = "SELECT * FROM client";
 ?>
 <div class="container">
@@ -73,13 +63,9 @@ $sql_pizza_all = "SELECT * FROM client";
 </div>
 <br>
 <?php
-// j'execute la requete
 $result = $conn_mysqli->query($sql_pizza_all);
 echo ("<div class='container-fluid'>");
-
-// je recupere les données en faisant un boucle
 echo("<div class='row'>");
-
 while ($ligne = $result->fetch_assoc()) {
     echo("<div class=' card col-sm-3 col-md-3'>");
     echo'<img class="card-img-top" src="images_client/'.$ligne['NROCLIE'].'.jpg" alt="Card image">';
@@ -91,7 +77,7 @@ while ($ligne = $result->fetch_assoc()) {
     echo("<a href='update_cli.php?id= ".$ligne['NROCLIE']."' class='btn btn-secondary'> update  </a> ");
     echo("</div>");
     echo("</div>");
-}// fin du while
+}
  echo("</div>");
 echo("</div>");
 ?>

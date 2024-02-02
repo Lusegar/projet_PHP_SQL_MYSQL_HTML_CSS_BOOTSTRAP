@@ -1,5 +1,4 @@
 <?php
-//connect to mysql
 $servername = "localhost";
 $username = "root";
 
@@ -12,22 +11,16 @@ $username = "root";
         }
 
     $sql = "DELETE FROM `livreur` WHERE NROLIVR=$livr_id";
-   // $result = $conn_mysqli->query($sql);
 
     if ($conn_mysqli->query($sql)) {
         header("Location: livreur.php");
     } else {
         echo "Erreur : " . $sql . "<br>" . $conn_mysqli->error;
     }
-
-    // Fermer la connexion
     $conn_mysqli->close();
-
 
 } else {
     echo "ID du livreur non spécifié.";
 }
-
-// Rediriger vers la liste des pizzas
 exit();
 ?>

@@ -31,7 +31,6 @@
     }
     $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -72,8 +71,7 @@
             width: 300px;
             height: 300px;
         }
-    </style>
-
+</style>
 <div class="container">
     <h2>Modifier un livreur</h2>
     <form method="post" action="">

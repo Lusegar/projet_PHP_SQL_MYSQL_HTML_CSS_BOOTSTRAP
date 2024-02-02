@@ -21,7 +21,6 @@ if (isset($_GET["id"])) {
 }
 $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -63,7 +62,6 @@ $conn_mysqli->close();
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -72,10 +70,8 @@ $conn_mysqli->close();
         <div class="col-md-6">
             <h2><?php echo $pizza_details['DESIGNPIZZ']; ?></h2>
             <p><strong>Prix :</strong> <?php echo $pizza_details['TARIFPIZZ']; ?> euros</p>
-            <!-- Ajoutez d'autres détails ici en fonction de votre base de données -->
         </div>
     </div>
 </div>
-
 </body>
 </html>

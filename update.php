@@ -17,7 +17,6 @@
         echo "ID de la pizza non spécifié.";
         exit();
     }
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $newDesignPizza = $_POST["newDesignPizza"];
         $newTarifPizza = $_POST["newTarifPizza"];
@@ -30,7 +29,6 @@
     }
     $conn_mysqli->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -71,8 +69,7 @@
             width: 300px;
             height: 300px;
         }
-    </style>
-
+</style>
 <div class="container">
     <h2>Modifier une pizza</h2>
     <form method="post" action="">
